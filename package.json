@@ -1,0 +1,14 @@
+{
+  "name": "animated-animals",
+  "version": "1.0.0",
+  "description": "animate the animals",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^8.2.1"
+  }
+}
