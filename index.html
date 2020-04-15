@@ -1,112 +1,52 @@
-<!-- Design Adapted from https://github.com/codrops/AnimatedAnimals -->
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<script src="husky.js"></script>
-
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Animated Animals | Alex the CSS Husky | Codrops</title>
-		<meta name="description" content="Demo 1 for the tutorial on how to animate SVG animals using only CSS (SCSS)" />
-		<meta name="keywords" content="animated animals, css, scss, squigglevision, svg, husky, web design" />
-		<meta name="author" content="David Khourshid for Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link href='https://fonts.googleapis.com/css?family=Freckle+Face' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/husky.css" />
-		<!--[if IE]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-
-	</head>
-
-
-
-	<body class="demo-husky">
-		<div class="snow"></div>
-		<div class="container">
-			<header class="codrops-header">
-				<h1 id="husky-text">Husky is Hungry</h1>
-				<br>
-				<div class="codrops-links">
-					<button id="food-button" class="waves-effect waves-light btn-large pink" type="submit" onclick="eatTheFood()"><i class="material-icons left">room_service</i>Eat Food</button>
-				</div>
-			</header>
-			<div class="content content--husky">
-				<div class="mountain"></div>
-				<div class="mountain"></div>
-				<div class="husky">
-					<div class="husky-mane">
-						<div class="husky-coat"></div>
-					</div>
-					<div class="husky-body">
-						<div class="husky-head">
-							<div class="husky-ear"></div>
-							<div class="husky-ear"></div>
-							<div class="husky-face">
-								<div class="husky-eye"></div>
-								<div class="husky-eye"></div>
-								<div class="husky-nose"></div>
-								<div class="husky-mouth">
-									<div class="husky-lips"></div>
-									<div class="husky-tongue"></div>
-								</div>
-							</div>
-						</div>
-						<div class="husky-torso"></div>
-					</div>
-					<div class="husky-legs">
-						<div class="husky-front-legs">
-							<div class="husky-leg"></div>
-							<div class="husky-leg"></div>
-						</div>
-						<div class="husky-hind-leg">
-						</div>
-					</div>
-					<div class="husky-tail">
-						<div class="husky-tail">
-							<div class="husky-tail">
-								<div class="husky-tail">
-									<div class="husky-tail">
-										<div class="husky-tail">
-											<div class="husky-tail"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
-					<defs>
-						<filter id="squiggly-0">
-							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
-							<feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
-						</filter>
-						<filter id="squiggly-1">
-							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
-							<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
-						</filter>
-						<filter id="squiggly-2">
-							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
-							<feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
-						</filter>
-						<filter id="squiggly-3">
-							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
-							<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
-						</filter>
-						<filter id="squiggly-4">
-							<feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
-							<feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
-						</filter>
-					</defs>
-				</svg>
-			</div><!-- /content -->
-		</div><!-- /container -->
-	</body>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <title>JavaScript program of Bubble sort</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="balls.js"></script>
+  </head>
+  <body>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div id="list-1" class="card-content white-text">
+              <span class="card-title">Schöne Kugeln</span>
+              <div id="ball-list">
+              <a class="btn-floating btn-large waves-effect waves-light red" id="5">5</a>
+              <a class="btn-floating btn-large waves-effect waves-light green" id="6">6</a>
+              <a class="btn-floating btn-large waves-effect waves-light orange" id="2">2</a>
+              <a class="btn-floating btn-large waves-effect waves-light blue" id="10">10</a>
+              <a class="btn-floating btn-large waves-effect waves-light pink" id="3">3</a>
+            </div>
+            </div>
+            <div class="card-action">
+			  <button onclick="addRandomBall('ball-list')">More Balls</button>
+            </div>
+          </div>
+        </div>
+	  </div>
+	  
+	  <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div id="list-1" class="card-content white-text">
+              <span class="card-title">Hässliche Kugeln</span>
+              <div id="ball-list2">
+              <a class="btn-floating btn-large waves-effect waves-light red" id="5">5</a>
+              <a class="btn-floating btn-large waves-effect waves-light green" id="6">6</a>
+              <a class="btn-floating btn-large waves-effect waves-light orange" id="2">2</a>
+              <a class="btn-floating btn-large waves-effect waves-light blue" id="10">10</a>
+              <a class="btn-floating btn-large waves-effect waves-light pink" id="3">3</a>
+            </div>
+            </div>
+            <div class="card-action">
+              <button onclick="addRandomBall('ball-list2')">More Balls</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </body>
 </html>
