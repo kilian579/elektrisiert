@@ -1,10 +1,17 @@
-function addRandomBall(div_id){
+function addRandomBall(div_id, amount){
     var div = document.getElementById(div_id);
-    div.appendChild(makeRandomBall())
 
-
+    for (var i=0; i<amount; i++){
+        div.appendChild(makeRandomBall());
+    }
+    
 }
 
+function addDifferentBall(div_id, amount){
+    var div = document.getElementById(div_id);
+    //Füge einen Ball hinzu, der noch nicht existiert
+    
+}
 function makeRandomBall(){
     var colors = ["red","green","purple","orange","yellow","blue","pink"];
     ball = document.createElement("a");
@@ -13,7 +20,7 @@ function makeRandomBall(){
     ball.classList.add("waves-effect");
     ball.classList.add("waves-light");
     ball.classList.add(colors[Math.floor(Math.random() * colors.length)]);
-    ball.innerText=Math.floor(Math.random() * 30);
+    ball.innerText=Math.floor(Math.random() * 100);
     
 
     return ball;

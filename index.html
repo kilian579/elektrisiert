@@ -2,27 +2,30 @@
   <html>
   <head>
   <meta charset="utf-8">
-  <title>JavaScript program of Bubble sort</title>
+  <title>Viele Kugeln</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="balls.js"></script>
+  <script src="sort.js"></script>
   </head>
   <body>
       <div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
-            <div id="list-1" class="card-content white-text">
+            <div id="list-1" class="card-content white-text scale-transition">
               <span class="card-title">Schöne Kugeln</span>
               <div id="ball-list">
-              <a class="btn-floating btn-large waves-effect waves-light red" id="5">5</a>
-              <a class="btn-floating btn-large waves-effect waves-light green" id="6">6</a>
-              <a class="btn-floating btn-large waves-effect waves-light orange" id="2">2</a>
-              <a class="btn-floating btn-large waves-effect waves-light blue" id="10">10</a>
-              <a class="btn-floating btn-large waves-effect waves-light pink" id="3">3</a>
+              <a class="btn-floating btn-large waves-effect waves-light red scale-transition" id="5">5</a>
+              <a class="btn-floating btn-large waves-effect waves-light green scale-transition" id="6">6</a>
+              <a class="btn-floating btn-large waves-effect waves-light orange scale-transition" id="2">2</a>
+              <a class="btn-floating btn-large waves-effect waves-light blue scale-transition" id="10">10</a>
+              <a class="btn-floating btn-large waves-effect waves-light pink scale-transition" id="3">3</a>
             </div>
             </div>
             <div class="card-action">
-			  <button onclick="addRandomBall('ball-list')">More Balls</button>
+        <button onclick="addRandomBall('ball-list', 5)">More Balls</button>
+        <button onclick="bubbleSort('ball-list')">bubblesort This!</button>
+        
             </div>
           </div>
         </div>
@@ -42,7 +45,9 @@
             </div>
             </div>
             <div class="card-action">
-              <button onclick="addRandomBall('ball-list2')">More Balls</button>
+        <button onclick="addRandomBall('ball-list2', 10)">More Balls</button>
+        <button onclick="swapSort('ball-list2')">Swap-Sort This!</button>
+			  <input>
             </div>
           </div>
         </div>
