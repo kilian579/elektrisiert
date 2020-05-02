@@ -1,14 +1,17 @@
 {
-  "name": "animated-animals",
+  "name": "essentials",
   "version": "1.0.0",
-  "description": "animate the animals",
+  "description": "Essentials for JavaScript Programming",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "",
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Kilian Steinberg",
   "license": "ISC",
   "dependencies": {
-    "electron": "^8.2.1"
+    "electron": "^8.2.3"
   }
 }

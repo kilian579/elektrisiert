@@ -1,49 +1,54 @@
+// Module laden
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
 
-// SET ENV
+// Entwicklermodus einschalten
 process.env.NODE_ENV = 'development';
 
+// Teile des Moduls laden
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
+// Objekte festlegen
 let mainWindow;
 let addWindow;
 
 
-// Listen for app to be ready
+// Warte bis App bereit ist
 app.on('ready', function(){
-  // Create new window
+  // Neues Browserfenster erstellen
   mainWindow = new BrowserWindow({
     webPreferences: {
         nodeIntegration: true
     }
   });
-  // Load html in window
+
+  // Html Seite in das Fenster laden
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes:true
   }));
-  // Quit app when closed
+
+  // App schließen, wenn 'closed'
   mainWindow.on('closed', function(){
     app.quit();
   });
 
-  // Build menu from template
+  // Menu anhand des Templates erstellen
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
   // Insert menu
   Menu.setApplicationMenu(mainMenu);
 });
 
-// Create menu template
+// Template Menu
 const mainMenuTemplate =  [
-  // Each object is a dropdown
+  // Jedes Objekt ist ein Dropdown-Item
   {
-    label: 'File',
+    label: 'Datei',
     submenu:[
       {
-        label: 'Quit',
+        label: 'Schließen',
         accelerator:process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
         click(){
           app.quit();
@@ -53,18 +58,13 @@ const mainMenuTemplate =  [
   }
 ];
 
-// If OSX, add empty object to menu
-if(process.platform == 'darwin'){
-  mainMenuTemplate.unshift({});
-}
-
-// Add developer tools option if in dev
+// Entwicklertools zum Menü hinzufügen, wenn im Entwicklermodus
 if(process.env.NODE_ENV !== 'production'){
   mainMenuTemplate.push({
     label: 'Developer Tools',
     submenu:[
       {
-        role: 'reload',
+        role: 'Reload',
         accelerator:'F5',
         click(item, focusedWindow){
         focusedWindow.reload();
@@ -72,7 +72,7 @@ if(process.env.NODE_ENV !== 'production'){
       },
       {
         label: 'Toggle DevTools',
-        accelerator:process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
+        accelerator: 'F12',
         click(item, focusedWindow){
           focusedWindow.toggleDevTools();
         }
