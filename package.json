@@ -12,6 +12,6 @@
   "author": "Kilian Steinberg",
   "license": "ISC",
   "dependencies": {
-    "electron": "^8.2.3"
+    "electron": "^9.4.0"
   }
 }
